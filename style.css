@@ -1,0 +1,591 @@
+section {
+    transition: opacity 0.8s ease-in-out;
+}
+
+/* Optional: Add a slight reveal effect */
+.section-title {
+    position: relative;
+    display: inline-block;
+}
+:root {
+    --bg: #f8fafc;
+    --text-dark: #1e293b;
+    --text-muted: #64748b;
+    --accent: #0f172a; /* Sophisticated Dark Slate */
+    --white: #ffffff;
+    --border: #e2e8f0;
+}
+
+body {
+    background-color: var(--bg);
+    color: var(--text-dark);
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    margin: 0;
+    line-height: 1.6;
+}
+
+.container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+
+/* Navigation */
+nav { display: flex; justify-content: space-between; align-items: center; padding: 30px 5%; }
+.logo { font-weight: 800; font-size: 1.5rem; letter-spacing: -1px; }
+.logo span { color: var(--text-muted); }
+.nav-links a { text-decoration: none; color: var(--text-muted); margin-left: 30px; font-weight: 600; font-size: 0.9rem; }
+.nav-cta { background: var(--accent); color: white !important; padding: 10px 20px; border-radius: 6px; }
+
+/* Hero Section */
+.hero { padding: 80px 0; }
+.hero-flex { display: flex; align-items: center; justify-content: space-between; gap: 60px; }
+.hero-text { flex: 1.2; }
+h1 { font-size: 3.8rem; line-height: 1.1; margin: 20px 0; font-weight: 800; letter-spacing: -2px; }
+.accent-text { color: var(--text-muted); }
+.badge { background: #e2e8f0; padding: 6px 16px; border-radius: 50px; font-size: 0.8rem; font-weight: 700; color: var(--text-dark); }
+
+/* About Narrative - Simplified */
+.about-narrative {
+    padding: 80px 0;
+}
+
+.narrative-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.about-p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: var(--text-dark);
+    margin-bottom: 20px;
+}
+
+.stat-card {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.stat-card i {
+    font-size: 1.4rem;
+    color: #3b82f6;
+    background: #eff6ff;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+}
+
+@media (max-width: 768px) {
+    .narrative-grid { grid-template-columns: 1fr; }
+}
+
+.id-card-static {
+    width: 300px;
+    background: var(--white);
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.05);
+    border: 1px solid var(--border);
+    text-align: center;
+    /* No more 'grab' cursor */
+    /* Only a simple scale effect on hover */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.id-card-static:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 30px 60px rgba(0,0,0,0.1);
+}
+
+/* Skills Section Overall */
+.skills-section {
+    padding: 80px 0;
+}
+
+.skills-category {
+    margin-bottom: 50px; /* Space between the two groups */
+}
+
+.category-label {
+    font-size: 1rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-bottom: 25px;
+    font-weight: 800;
+}
+
+/* The Grid for tiles */
+.skills-grid {
+    display: grid;
+    /* Large tiles: 160px minimum width */
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); 
+    gap: 20px;
+}
+
+/* The Individual Tile Container */
+.skill-tile {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 40px 20px; /* Large vertical padding for "Big" look */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
+}
+
+.skill-tile:hover {
+    transform: translateY(-10px);
+    border-color: var(--text-dark);
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.08);
+}
+
+/* Make Icons Large */
+.skill-tile i {
+    font-size: 4rem; /* Significantly larger icons */
+}
+
+/* Bold Labels */
+.skill-label {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--text-dark);
+}
+
+/* Specific logic for database icons if they are too small */
+.devicon-mysql-plain, .devicon-firebase-plain {
+    font-size: 3.8rem;
+}
+
+/* Footer Styles */
+.footer-section {
+    background: #0f172a;
+    color: white;
+    padding: 80px 0 40px;
+    margin-top: 100px;
+}
+
+.footer-flex {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 50px;
+}
+
+.footer-info h2 { font-size: 2.5rem; margin-bottom: 20px; line-height: 1.2; }
+.footer-info p { color: #94a3b8; font-size: 1.1rem; }
+
+.contact-links { margin-top: 30px; }
+.contact-item { 
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    color: white; 
+    text-decoration: none; 
+    margin-bottom: 15px; 
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+
+.contact-item i { color: #3b82f6; width: 20px; }
+.contact-item:hover { color: #3b82f6; }
+
+/* Social Icons Layout */
+.footer-social h3 {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #475569;
+    margin-bottom: 20px;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.social-icons a {
+    width: 45px;
+    height: 45px;
+    background: #1e293b;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+    border: 1px solid #334155;
+}
+
+.social-icons a:hover {
+    background: #3b82f6;
+    transform: translateY(-5px);
+    border-color: #3b82f6;
+}
+
+.linkedin-btn {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+.copyright {
+    font-size: 0.8rem;
+    color: #475569;
+    margin-top: 20px;
+}
+
+.id-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 25px; }
+.univ { font-weight: 800; color: #991b1b; font-size: 0.9rem; }
+.chip { width: 40px; height: 30px; background: #fbbf24; border-radius: 6px; }
+
+.profile-frame {
+    width: 140px;
+    height: 140px;
+    margin: 0 auto 20px;
+    border-radius: 12px;
+    overflow: hidden;
+    background: #f1f5f9;
+}
+
+.profile-frame img { width: 100%; height: 100%; object-fit: cover; }
+.role { color: #3b82f6; font-weight: 700; font-size: 0.85rem; margin-bottom: 5px; text-transform: uppercase; }
+.honors { font-size: 0.75rem; color: var(--text-muted); font-weight: 500; }
+
+/* Project Cards with Image & Button */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.project-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    overflow: hidden; /* Clips the image to the card corners */
+    position: relative; /* Necessary for absolute positioning of the button */
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+}
+
+.project-image {
+    width: 100%;
+    height: 250px;
+    background: #f1f5f9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid var(--border);
+}
+
+.project-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.placeholder-text {
+    color: #94a3b8;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.project-content {
+    padding: 25px;
+    padding-bottom: 70px; /* Extra space at bottom for the button */
+}
+
+.project-content h3 {
+    margin: 10px 0;
+    font-size: 1.25rem;
+}
+
+.project-content p {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
+/* Education Timeline Styling */
+.education-timeline {
+    position: relative;
+    max-width: 800px;
+    margin: 40px auto;
+    padding-left: 30px;
+    border-left: 3px solid var(--border); /* The vertical line */
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 50px;
+}
+
+.timeline-dot {
+    position: absolute;
+    left: -38px;
+    top: 5px;
+    width: 14px;
+    height: 14px;
+    background: var(--text-dark);
+    border: 3px solid #fff;
+    border-radius: 50%;
+    box-shadow: 0 0 0 3px var(--border);
+}
+
+.timeline-date {
+    font-weight: 800;
+    color: #3b82f6;
+    font-size: 0.9rem;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.edu-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.honor-tag {
+    background: #fef3c7; /* Gold/Yellowish */
+    color: #92400e;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.honor-tag.secondary {
+    background: #eff6ff;
+    color: #1e40af;
+}
+
+.school-name {
+    font-weight: 700;
+    color: var(--text-dark);
+    margin: 5px 0 15px;
+}
+
+.achievement-chips {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.achievement-chips span {
+    background: #f8fafc;
+    border: 1px solid var(--border);
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--text-muted);
+}
+
+.edu-desc {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: var(--text-muted);
+}
+
+/* 1. The Full-Screen Overlay (The "Curtain") */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(15, 23, 42, 0.6); /* Darkens the background */
+    backdrop-filter: blur(10px); /* The blur effect */
+    -webkit-backdrop-filter: blur(10px); /* Safari support */
+    display: none; /* Hides it from the bottom of the page */
+    justify-content: center;
+    align-items: center;
+    z-index: 9999; /* Keeps it above everything else */
+    padding: 20px;
+}
+
+/* 2. Show the Modal when JS adds the 'active' class */
+.modal-overlay.active {
+    display: flex;
+}
+
+/* 3. The White Form Box */
+.modal-content {
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 28px;
+    width: 100%;
+    max-width: 550px;
+    position: relative;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+    animation: modalPop 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+@keyframes modalPop {
+    from { transform: scale(0.9); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+/* 4. The Close Button (X) */
+.close-modal {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: #f1f5f9;
+    border: none;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    font-size: 1.2rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.2s;
+}
+
+.close-modal:hover {
+    background: #e2e8f0;
+    transform: rotate(90deg);
+}
+
+/* Fix the Grid Overlap */
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px; /* Increased gap to prevent overlap */
+    margin-bottom: 20px;
+}
+
+/* Ensure the container doesn't squash fields */
+.field-container {
+    position: relative;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.field-container input, 
+.field-container textarea {
+    width: 100%;
+    padding: 16px;
+    border: 1.5px solid #e2e8f0;
+    border-radius: 12px;
+    background: #ffffff;
+    font-size: 1rem;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    box-sizing: border-box; /* Crucial: ensures padding doesn't break width */
+}
+
+/* Re-styling the Button to look like the design */
+.premium-btn {
+    width: 100%;
+    background: #0f172a;
+    color: #ffffff;
+    padding: 16px 24px;
+    border-radius: 12px;
+    border: none;
+    font-weight: 700;
+    font-size: 1rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    transition: all 0.3s ease;
+    margin-top: 10px;
+    appearance: none; /* Removes default browser button styling */
+    -webkit-appearance: none;
+}
+
+.premium-btn:hover {
+    background: #3b82f6;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(59, 130, 246, 0.2);
+}
+
+/* Fix Label positioning so it doesn't float weirdly */
+.field-container label {
+    position: absolute;
+    left: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #94a3b8;
+    background: white;
+    padding: 0 4px;
+    transition: 0.2s ease;
+    pointer-events: none;
+}
+
+/* Move label up on focus/type */
+.field-container input:focus ~ label,
+.field-container input:not(:placeholder-shown) ~ label,
+.field-container textarea:focus ~ label,
+.field-container textarea:not(:placeholder-shown) ~ label {
+    top: 0;
+    font-size: 0.75rem;
+    font-weight: 800;
+    color: #3b82f6;
+}
+
+/* Textarea needs special label placement because it's tall */
+.field-container textarea ~ label {
+    top: 25px;
+}
+
+/* Bottom Right Details Button */
+.details-btn {
+    position: absolute;
+    bottom: 25px;
+    right: 25px;
+    text-decoration: none;
+    color: #3b82f6;
+    font-weight: 700;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: gap 0.3s ease;
+}
+
+.details-btn:hover {
+    gap: 12px;
+    color: var(--text-dark);
+}
+.category { color: var(--text-muted); font-size: 0.7rem; font-weight: 800; text-transform: uppercase; }
+.tags span { font-size: 0.7rem; background: #f1f5f9; padding: 4px 10px; border-radius: 4px; margin-right: 6px; font-weight: 600; }
+
+.timeline-item { margin-bottom: 40px; }
+.year { font-weight: 800; color: var(--text-muted); font-size: 0.9rem; }
+
+.btn-primary { background: var(--accent); color: white; padding: 14px 28px; text-decoration: none; border-radius: 8px; font-weight: 600; display: inline-block; }
+.btn-secondary { margin-left: 20px; color: var(--text-dark); font-weight: 600; text-decoration: underline; }
