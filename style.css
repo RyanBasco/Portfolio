@@ -83,8 +83,499 @@ h1 { font-size: 3.8rem; line-height: 1.1; margin: 20px 0; font-weight: 800; lett
     border-radius: 10px;
 }
 
+/* ========== TABLET & MOBILE RESPONSIVENESS ========== */
+
+/* Tablets (768px and below) */
 @media (max-width: 768px) {
-    .narrative-grid { grid-template-columns: 1fr; }
+    /* Navigation */
+    nav {
+        padding: 20px 5%;
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+    
+    .logo {
+        font-size: 1.2rem;
+    }
+    
+    .nav-links {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+    }
+    
+    .nav-links a {
+        margin-left: 0;
+        padding: 10px 15px;
+        display: block;
+    }
+    
+    .nav-cta {
+        width: 100%;
+        text-align: center;
+    }
+    
+    /* Hero Section */
+    .hero {
+        padding: 50px 0;
+    }
+    
+    .hero-flex {
+        flex-direction: column;
+        gap: 30px;
+        align-items: center;
+    }
+    
+    .hero-text {
+        flex: 1;
+        text-align: center;
+    }
+    
+    h1 {
+        font-size: 2.5rem;
+        line-height: 1.2;
+    }
+    
+    .hero-btns {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .btn-primary, .btn-secondary {
+        width: 100%;
+        text-align: center;
+        margin-left: 0;
+    }
+    
+    /* Hero Image (ID Card) */
+    .hero-image {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .id-card-static {
+        width: 260px;
+    }
+    
+    /* About Section */
+    .about-narrative {
+        padding: 50px 0;
+    }
+    
+    .narrative-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .about-p {
+        font-size: 1rem;
+    }
+    
+    /* Skills Section */
+    .skills-section {
+        padding: 50px 0;
+    }
+    
+    .skills-grid {
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+        gap: 15px;
+    }
+    
+    .skill-tile {
+        padding: 25px 15px;
+    }
+    
+    .skill-tile i {
+        font-size: 3rem;
+    }
+    
+    .skill-label {
+        font-size: 0.85rem;
+    }
+    
+    .category-label {
+        font-size: 0.85rem;
+    }
+    
+    /* Projects Section */
+    .project-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .project-image {
+        height: 200px;
+    }
+    
+    .project-content {
+        padding: 20px;
+        padding-bottom: 60px;
+    }
+    
+    .project-content h3 {
+        font-size: 1.1rem;
+    }
+    
+    .project-content p {
+        font-size: 0.9rem;
+    }
+    
+    /* Timeline */
+    .education-timeline {
+        padding-left: 20px;
+    }
+    
+    .timeline-dot {
+        left: -32px;
+        width: 12px;
+        height: 12px;
+    }
+    
+    .timeline-item {
+        margin-bottom: 40px;
+    }
+    
+    .edu-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .achievement-chips {
+        flex-wrap: wrap;
+    }
+    
+    /* Footer */
+    .footer-section {
+        padding: 50px 0 30px;
+        margin-top: 50px;
+    }
+    
+    .footer-flex {
+        flex-direction: column;
+        gap: 30px;
+    }
+    
+    .footer-info h2 {
+        font-size: 1.8rem;
+    }
+    
+    .footer-info p {
+        font-size: 0.95rem;
+    }
+    
+    .contact-item {
+        font-size: 0.9rem;
+    }
+    
+    /* Modal */
+    .modal-content {
+        padding: 25px;
+    }
+    
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .close-modal {
+        width: 30px;
+        height: 30px;
+        font-size: 1rem;
+    }
+}
+
+/* Small Phones (480px and below) */
+@media (max-width: 480px) {
+    .container {
+        padding: 0 15px;
+    }
+    
+    /* Navigation */
+    nav {
+        padding: 15px 5%;
+    }
+    
+    .logo {
+        font-size: 1rem;
+    }
+    
+    .nav-links a {
+        font-size: 0.8rem;
+    }
+    
+    /* Hero Section */
+    .hero {
+        padding: 40px 0;
+    }
+    
+    h1 {
+        font-size: 2rem;
+        line-height: 1.2;
+        margin: 15px 0;
+    }
+    
+    .badge {
+        font-size: 0.7rem;
+        padding: 5px 12px;
+    }
+    
+    .hero-text p {
+        font-size: 0.95rem;
+        line-height: 1.6;
+    }
+    
+    .id-card-static {
+        width: 220px;
+        padding: 20px;
+    }
+    
+    .profile-frame {
+        width: 100px;
+        height: 100px;
+        margin: 0 auto 15px;
+    }
+    
+    .id-header {
+        margin-bottom: 15px;
+    }
+    
+    .univ {
+        font-size: 0.75rem;
+    }
+    
+    .chip {
+        width: 30px;
+        height: 25px;
+    }
+    
+    /* About Section */
+    .about-narrative {
+        padding: 40px 0;
+    }
+    
+    .narrative-grid {
+        gap: 20px;
+    }
+    
+    .about-p {
+        font-size: 0.9rem;
+    }
+    
+    .stat-card {
+        padding: 15px;
+    }
+    
+    .stat-card i {
+        font-size: 1.2rem;
+        width: 40px;
+        height: 40px;
+    }
+    
+    /* Section Title */
+    .section-title {
+        font-size: 1.8rem;
+    }
+    
+    /* Skills Section */
+    .skills-section {
+        padding: 40px 0;
+    }
+    
+    .skills-grid {
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+        gap: 10px;
+    }
+    
+    .skill-tile {
+        padding: 20px 10px;
+    }
+    
+    .skill-tile i {
+        font-size: 2.5rem;
+    }
+    
+    .skill-label {
+        font-size: 0.75rem;
+    }
+    
+    .category-label {
+        font-size: 0.75rem;
+        margin-bottom: 15px;
+    }
+    
+    .skills-category {
+        margin-bottom: 35px;
+    }
+    
+    /* Projects Section */
+    .project-image {
+        height: 180px;
+    }
+    
+    .project-content {
+        padding: 15px;
+        padding-bottom: 50px;
+    }
+    
+    .project-content h3 {
+        font-size: 1rem;
+        margin: 8px 0;
+    }
+    
+    .project-content p {
+        font-size: 0.85rem;
+    }
+    
+    .details-btn {
+        bottom: 15px;
+        right: 15px;
+        font-size: 0.8rem;
+    }
+    
+    /* Timeline */
+    .education-timeline {
+        padding-left: 15px;
+    }
+    
+    .timeline-dot {
+        left: -28px;
+        width: 10px;
+        height: 10px;
+    }
+    
+    .timeline-date {
+        font-size: 0.8rem;
+    }
+    
+    .school-name {
+        font-size: 1rem;
+    }
+    
+    .edu-desc {
+        font-size: 0.9rem;
+    }
+    
+    .honor-tag {
+        font-size: 0.65rem;
+        padding: 4px 8px;
+    }
+    
+    /* Footer */
+    .footer-section {
+        padding: 40px 0 25px;
+        margin-top: 40px;
+    }
+    
+    .footer-info h2 {
+        font-size: 1.5rem;
+        margin-bottom: 15px;
+    }
+    
+    .footer-info p {
+        font-size: 0.9rem;
+    }
+    
+    .contact-links {
+        margin-top: 20px;
+    }
+    
+    .contact-item {
+        font-size: 0.85rem;
+        margin-bottom: 12px;
+    }
+    
+    .contact-item i {
+        width: 18px;
+    }
+    
+    .footer-social h3 {
+        font-size: 0.8rem;
+        margin-bottom: 15px;
+    }
+    
+    .social-icons {
+        gap: 10px;
+    }
+    
+    .social-icons a {
+        width: 40px;
+        height: 40px;
+        font-size: 1rem;
+    }
+    
+    /* Modal */
+    .modal-overlay {
+        padding: 15px;
+    }
+    
+    .modal-content {
+        padding: 20px;
+        border-radius: 20px;
+    }
+    
+    .form-grid {
+        gap: 15px;
+    }
+    
+    .field-container input,
+    .field-container textarea {
+        padding: 12px;
+        font-size: 1rem;
+    }
+    
+    .premium-btn {
+        padding: 14px 20px;
+        font-size: 0.95rem;
+    }
+    
+    .close-modal {
+        width: 28px;
+        height: 28px;
+        font-size: 0.9rem;
+    }
+    
+    /* Buttons */
+    .btn-primary {
+        padding: 12px 20px;
+        font-size: 0.95rem;
+    }
+}
+
+/* Extra Small Phones (under 360px) */
+@media (max-width: 360px) {
+    h1 {
+        font-size: 1.7rem;
+    }
+    
+    .hero-text p {
+        font-size: 0.9rem;
+    }
+    
+    .id-card-static {
+        width: 190px;
+        padding: 15px;
+    }
+    
+    .profile-frame {
+        width: 90px;
+        height: 90px;
+        margin: 0 auto 10px;
+    }
+    
+    .skills-grid {
+        grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
+    }
+    
+    .skill-tile i {
+        font-size: 2rem;
+    }
+    
+    .skill-label {
+        font-size: 0.7rem;
+    }
 }
 
 .id-card-static {
