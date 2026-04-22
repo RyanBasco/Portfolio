@@ -37,6 +37,10 @@
     margin-bottom: 20px;
 }
 
+.project-hero-text {
+    min-width: 0; /* prevents overflow pushing layout */
+}
+
 .project-hero-text p {
     font-size: 1.1rem;
     line-height: 1.8;
